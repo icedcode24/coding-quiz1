@@ -6,7 +6,8 @@ var question1 =document.getElementById("question1")
 var question2 =document.getElementById("question2")
 var question3 =document.getElementById("question3")
 var question4 =document.getElementById("question4")
-
+var initialsinput =document.getElementById("initials")
+var highscorebutton =document.getElementById("highscore")
 function showStart() {
     startScreen.style.display = null;
     quizScreen.style.display = "none";
