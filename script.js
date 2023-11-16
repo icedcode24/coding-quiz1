@@ -8,6 +8,8 @@ var question3 =document.getElementById("question3")
 var question4 =document.getElementById("question4")
 var initialsinput =document.getElementById("initials")
 var highscorebutton =document.getElementById("highscore")
+var timer = document.getElementById("timer")
+var score = document.getElementById("score")
 function showStart() {
     startScreen.style.display = null;
     quizScreen.style.display = "none";
@@ -29,13 +31,20 @@ function showEnd() {
     startScreen.style.display = "none";
     quizScreen.style.display = "none";
     EndScreen.style.display = null;
+    score.textContent= 
 }
 
 startButton.addEventListener('click', function(event) {
     showQuiz();
 });
+var score = 90 
 
 quizScreen.addEventListener('click', function(event){
+    var timeInterval=setInterval(function(){
+        score--
+        timer.textContent = score
+
+    }, 1000)
     if (event.target.matches('button')) {
         if (question1.style.display === "block"){
             question1.style.display = "none"
