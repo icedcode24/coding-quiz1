@@ -9,7 +9,7 @@ var question4 =document.getElementById("question4")
 var initialsinput =document.getElementById("initials")
 var highscorebutton =document.getElementById("highscore")
 var timer = document.getElementById("timer")
-var score = document.getElementById("score")
+var userscore = document.getElementById("score")
 function showStart() {
     startScreen.style.display = null;
     quizScreen.style.display = "none";
@@ -31,7 +31,13 @@ function showEnd() {
     startScreen.style.display = "none";
     quizScreen.style.display = "none";
     EndScreen.style.display = null;
-    score.textContent= 
+    
+}
+function highscorelocalstorage(){
+    var highscoreobject= {
+        user: initialsinput.value(),
+        score: userscore.textContent
+    }
 }
 
 startButton.addEventListener('click', function(event) {
@@ -62,7 +68,11 @@ quizScreen.addEventListener('click', function(event){
             question4.style.display = "none"
            showEnd(); 
         }
-        
+        userscore.textContent= score
     }
 });
-showStart()
+function init () {
+    showStart();
+}
+
+init();
