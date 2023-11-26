@@ -13,3 +13,4 @@ file:///Users/cedrichamilton/Bootcamp/challenges/coding-quiz1/index.html
 To help full stack developer students become more familiar with software terminolgy
 
 ### ScreenShots
+![Alt text](<coding quiz screen shot.png>)
